@@ -1,0 +1,26 @@
+1)let password="Weakpass";
+function paswordchecker(password){
+  if(password.length<8){
+    console.log("password length is less than 8");
+  }
+  else if(!/[A-Z]/.test(password)){
+    console.log("it should have atleast one upper letter")
+  }
+  else if(!/\d/.test(password)){
+    console.log("it shoudl have one number")
+  }
+  else if(!/[!@#$%^&*]/.test(password)){
+    console.log('at least conatin that character');
+  }
+  else if(/\s/.test(password)){
+    console.log("should not a have space")
+  }
+  else{
+    console.log("password is correct");
+  }
+}
+paswordchecker(password);
+
+2)/^[A-Za-z_+.][A-Za-z0-0_+.]{0,19}\.(txt|csv)/.test(filename);
+
+3)/^[A-Z]{2}[0-9]{4}(-[A-Z]{2})?$/
