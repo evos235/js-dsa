@@ -1,0 +1,13 @@
+1)largest substring without repeating characters
+let set=new Set();
+    let l=0;
+    let m=0;
+    for(let r=0;r<s.length;r++){
+        while(set.has(s[r])){
+            set.delete(s[l]);
+            l++;
+        }
+        set.add(s[r]);
+        m=Math.max(m,r-l+1);
+    }
+    return m;
